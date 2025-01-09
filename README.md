@@ -31,12 +31,13 @@ Seccomp takes security a step further by limiting what actions honeypots can per
 Using the ELK Stack (Elasticsearch, Logstash, and Kibana), we turned raw attack data into clear, actionable insights. Here’s a preview of what we found:
 
 🔍 Attack Logs
+
 Cowrie logged every command entered by attackers, revealing common exploitation techniques.
 Dionaea collected malware samples for further analysis.
 📈 Data Visualizations
+
 Attack frequency by country 🌍.
 Most commonly attempted commands 📜.
 Trends over time 🕒.
-
 🌟 Why This Matters
 Cybersecurity is an ongoing battle between defenders and attackers. Honeypots help us stay one step ahead by showing us how hackers operate in the wild. This project highlights how even small, focused tools can play a big role in protecting systems.
