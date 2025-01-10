@@ -1,6 +1,7 @@
 # 🌐 **Honeypots in Action: Analyzing Attacks and Strengthening Defenses**
 
----
+
+
 
 ## 👋 **Introduction**
 
@@ -8,7 +9,8 @@ Welcome to **Honeypots in Action**! This project is all about using **honeypots*
 
 We set up three honeypots: **Dionaea**, **Cowrie**, and **HoneyD**. To ensure they stayed safe while under attack, we added extra security layers with **AppArmor** 🛡️ and **Seccomp** 🔒. Together, they helped us safely collect attack data and gain insights into the minds of cybercriminals.
 
----
+
+
 
 ## 🎯 **Objectives**
 
@@ -18,7 +20,8 @@ Here’s what we set out to achieve:
 - 🛡️ **Strengthen Defenses**: Use tools like AppArmor and Seccomp to ensure our honeypots remain secure.  
 - 📊 **Visualize the Data**: Create charts and dashboards using the ELK Stack to make sense of the collected attack data.
 
----
+
+
 
 ## 🛠️ **Honeypots Overview**
 
@@ -30,7 +33,8 @@ Let’s meet the tools that made it all happen:
 
 These honeypots let us simulate attack scenarios, such as password brute-forcing and malware injection, in a controlled environment.
 
----
+
+
 
 ## 🔐 **Security Concepts: AppArmor & Seccomp**
 
@@ -42,7 +46,8 @@ To ensure our honeypots couldn’t be used against us, we relied on two Linux se
 - 🔒 **Seccomp**  
   Seccomp takes security a step further by limiting what actions honeypots can perform. It’s like giving them a small vocabulary—only essential system calls are allowed. Even if a hacker breaches one honeypot, their options are severely restricted.
 
----
+
+
 
 #🌟 **Why This Project Matters**
 Honeypots give us a glimpse into how hackers think and operate, helping us stay ahead of their attacks. By pairing these tools with strong security measures like AppArmor and Seccomp, this project shows how small but smart steps can make systems much safer.
