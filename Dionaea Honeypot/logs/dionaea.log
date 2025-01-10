@@ -1,0 +1,3 @@
+[10012025 11:04:43] pcap /dionaea/modules/pcap/pcap.c:167-debug: reject local:'192.168.199.143:2040' remote:'192.168.199.143:57572'
+[10012025 11:04:43] incident /dionaea/src/incident.c:376-debug: reporting 0x555905c5cbc0
+[10012025 11:04:43] incident /dionaea/src/incident.c:365-debug: incident 0x555905c5cbc0 dionaea.connection.tcp.reject

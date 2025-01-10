@@ -1,0 +1,23 @@
+#The full path is /etc/apparmor.d/opt/dionaea
+
+# Last Modified: Sun Dec 29 13:55:55 2024
+#include <tunables/global>
+/opt/dionaea {
+    #include <abstractions/base>
+
+    # Règles pour les fichiers et répertoires
+    /opt/dionaea/** r,
+    /opt/dionaea/bin/dionaea px,
+    /var/lib/dionaea/** rw,
+    /var/log/dionaea/** rw,
+    /etc/dionaea/** r,
+    /tmp/** rw,
+
+    # Capacités nécessaires
+    capability net_bind_service,
+    capability sys_admin,
+    capability setuid,
+    capability setgid,
+    capability dac_override,
+    capability sys_chroot,
+}

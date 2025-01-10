@@ -1,0 +1,16 @@
+[Unit]
+Description=Honeyd Honeypot Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/honeyd -d -f /opt/honeyd/honeyd.conf
+User=honeyd
+Group=honeyd
+StandardOutput=append:/var/log/honeyd.log
+StandardError=append:/var/log/honeyd.log
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

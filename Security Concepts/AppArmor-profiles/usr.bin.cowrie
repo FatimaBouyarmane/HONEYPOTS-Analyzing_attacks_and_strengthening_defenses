@@ -1,0 +1,78 @@
+#The full path for this file is: /etc/apparmor.d/usr/bin/cowrie
+
+# Last Modified: <Date>
+#include <tunables/global>
+
+# Define Cowrie binary path
+/opt/cowrie/bin/cowrie {
+  # Include basic abstractions
+  # Include abstractions for base, Python, and other necessary services
+  # (modify or add abstractions as needed for Cowrie)
+  #include <abstractions/base>
+  #include <abstractions/nameservice>
+  #include <abstractions/openssl>
+  #include <abstractions/python>
+  #include <abstractions/ubuntu-browsers.d/multimedia>
+  #include <abstractions/user-tmp>
+  
+  # Define necessary capabilities
+  capability chown,
+  capability dac_override,
+  capability net_admin,
+  capability net_bind_service,
+  capability net_raw,
+  capability setgid,
+  capability setuid,
+
+  # Define network permissions
+  network bluetooth raw,
+  network inet dgram,
+  network inet raw,
+  network inet stream,
+  network inet6 dgram,
+  network inet6 raw,
+  network inet6 stream,
+  network packet dgram,
+
+  # Deny write access to system files
+  deny /etc/group w,
+  deny /etc/passwd w,
+
+  # Allow Cowrie directories and logs
+  /opt/cowrie/** r,
+  /opt/cowrie/bin/** r,
+  /opt/cowrie/var/run/** rw,
+  /opt/cowrie/var/log/** rw,
+  /opt/cowrie/logs/** rw,
+
+  # Allow Python executable and libraries
+  /usr/bin/python3 r,
+  /usr/lib/python3.*/** r,
+  /usr/bin/python3.9 ixr,
+
+  # Allow access to /dev/tty for terminal interaction
+  /dev/tty rw,
+
+  # Allow execution and reading of system binaries
+  /usr/bin/dirname rix,
+  /usr/bin/grep rix,
+  /usr/bin/awk rix,
+  /usr/bin/sed rix,
+  /usr/bin/cut rix,
+  /usr/bin/cat rix,
+  /usr/bin/ls rix,
+  /usr/bin/find rix,
+
+  /opt/cowrie/cowrie-env/bin/twistd rix,
+  /opt/cowrie/cowrie-env/lib/python3.9/site-packages/** mr,
+  /opt/cowrie/** rw,
+  /opt/cowrie/ r,
+
+  /proc/*/cgroup r,
+
+  /sys/fs/cgroup/cpu,cpuacct/cpu.cfs_quota_us r,
+  /sys/fs/cgroup/cpu,cpuacct/cpu.cfs_period_us r,
+
+  /etc/ssh/moduli r,
+
+}

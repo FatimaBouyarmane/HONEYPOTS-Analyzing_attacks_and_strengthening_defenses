@@ -1,0 +1,14 @@
+[Unit]
+Description=Dionaea Honeypot Service
+After=network. target
+
+[Service]
+ExecStart=/opt/dionaea/bin/dionaea -c /opt/dionaea/etc/dionaea/dionaea.cfg
+WorkingDirectory=/opt/dionaea
+Restart=on-failure
+User=root
+Group=nogroup
+LimttNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

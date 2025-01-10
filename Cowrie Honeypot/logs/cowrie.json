@@ -1,0 +1,49 @@
+/* "/opt/cowrie/var/log/cowrie/cowrie.json"
+   Here are some samples of attack logs detected by the Cowrie Honeypot.
+*/
+
+[
+    {
+      "eventid": "cowrie.session.connect",
+      "src_ip": "192.168.1.10",
+      "src_port": 36812,
+      "dst_ip": "192.168.62.132",
+      "dst_port": 2222,
+      "session": "76c6dc4a335e",
+      "protocol": "ssh",
+      "message": "New connection: 192.168.1.10:36812 (192.168.62.132:2222) [session: 76c6dc4a335e]",
+      "sensor": "ubuntu",
+      "timestamp": "2025-01-06T09:01:12.636214Z"
+    },
+    {
+      "eventid": "cowrie.session.closed",
+      "duration": "0.1",
+      "message": "Connection lost after 0.1 seconds",
+      "sensor": "ubuntu",
+      "timestamp": "2025-01-06T09:01:12.763801Z",
+      "src_ip": "192.168.1.10",
+      "session": "76c6dc4a335e"
+    },
+    {
+      "eventid": "cowrie.session.connect",
+      "src_ip": "192.168.1.10",
+      "src_port": 38282,
+      "dst_ip": "192.168.1.12",
+      "dst_port": 2222,
+      "session": "caae7120248e",
+      "protocol": "ssh",
+      "message": "New connection: 192.168.1.10:38282 (192.168.62.132:2222) [session: caae7120248e]",
+      "sensor": "ubuntu",
+      "timestamp": "2025-01-06T09:01:55.228987Z"
+    },
+    {
+      "eventid": "cowrie.client.version",
+      "version": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11",
+      "message": "Remote SSH version: SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11",
+      "sensor": "ubuntu",
+      "timestamp": "2025-01-06T09:01:55.237416Z",
+      "src_ip": "192.168.1.10",
+      "session": "caae7120248e"
+    }
+  ]
+  

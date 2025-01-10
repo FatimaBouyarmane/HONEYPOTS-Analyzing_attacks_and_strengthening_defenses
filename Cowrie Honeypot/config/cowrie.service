@@ -1,0 +1,17 @@
+[Unit]
+Description=Cowrie Honeypot
+After=network.target
+
+[Service]
+User=cowrie
+Group=cowrie
+WorkingDirectory=/opt/cowrie
+ExecStart=/opt/cowrie/bin/cowrie start
+ExecStop=/opt/cowrie/bin/cowrie stop
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+PIDFile=/opt/cowrie/var/run/cowrie.pid
+
+[Install]
+WantedBy=multi-user.target
