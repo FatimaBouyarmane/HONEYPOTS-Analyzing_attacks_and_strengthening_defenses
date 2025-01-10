@@ -43,3 +43,6 @@ To ensure our honeypots couldn’t be used against us, we relied on two Linux se
   Seccomp takes security a step further by limiting what actions honeypots can perform. It’s like giving them a small vocabulary—only essential system calls are allowed. Even if a hacker breaches one honeypot, their options are severely restricted.
 
 ---
+
+#🌟 **Why This Project Matters**
+Honeypots give us a glimpse into how hackers think and operate, helping us stay ahead of their attacks. By pairing these tools with strong security measures like AppArmor and Seccomp, this project shows how small but smart steps can make systems much safer.
